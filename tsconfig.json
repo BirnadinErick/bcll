@@ -15,6 +15,9 @@
       "@config/*": [
         "src/config/*"
       ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
     },
     "allowImportingTsExtensions": true
   }
