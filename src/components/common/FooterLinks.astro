@@ -1,0 +1,16 @@
+---
+const { links } = Astro.props;
+---
+
+<div class="flex-1 lg:flex-none">
+  <h4 class="mb-8 text-2xl font-bold text-black">{links["title"]}</h4>
+  <ul class="list-item space-y-5">
+    {
+      links.children.map((l: any) => (
+        <li>
+          <a href={l.l}>{l.t}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
