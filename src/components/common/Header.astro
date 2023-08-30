@@ -1,0 +1,36 @@
+---
+import TopBanner from "./TopBanner.astro";
+import { name_short } from "@config/bio.ts";
+import CTA from "./CTA.astro";
+import SearchBar from "./SearchBar.astro";
+import SearchBtn from "./SearchBtn.astro";
+import HamMenu from "./HamMenu.astro";
+
+import Brand from "@frag/Brand.astro"
+
+import Nav from "@frag/Nav.astro"
+---
+
+<header class="site-header">
+  <TopBanner />
+
+  <nav class="main-header py-8 header-normal2 rt-sticky top-0 w-full z-[999]">
+    <div class="container">
+      <div class="flex items-baseline justify-between">
+        <Brand/>
+        <div class="flex items-center flex-1">
+          <div class="flex-1 main-menu relative mr-[74px]">
+            <Nav/>
+            
+            <SearchBar />
+          </div>
+          <div class="flex-none flex space-x-[18px]">
+            <SearchBtn />
+            <HamMenu />
+            <CTA />
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

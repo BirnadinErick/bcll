@@ -1,0 +1,31 @@
+---
+import { name_short, fb_link } from "@config/bio.ts";
+
+import Nav from "@frag/Nav.astro"
+import Brand from "@frag/Brand.astro"
+---
+
+<nav
+  class="openmobile-menu fixed top-0 h-screen pt-10 pb-6 bg-white shadow-box2 w-[320px] overflow-y-auto flex flex-col z-[999]"
+>
+  <div class="flex justify-between px-6 flex-none">
+    <Brand/>
+    <span class="text-3xl text-black cursor-pointer rt-mobile-menu-close">
+      <iconify-icon icon="fe:close"></iconify-icon>
+    </span>
+  </div>
+  <div class="mobile-menu mt-6 flex-1">
+    <Nav/>
+  </div>
+
+  <div class="flex-none pb-4">
+    <div class="text-center text-black font-semibold mb-2">Follow {name_short}</div>
+    <ul class="flex space-x-4 justify-center">
+      <li>
+        <a href={fb_link} class="flex h-10 w-10">
+          <img src="/assets/images/icon/fb.svg" alt="facebook logo" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

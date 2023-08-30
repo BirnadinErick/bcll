@@ -11,7 +11,11 @@
       ],
       "@layouts/*": [
         "src/layouts/*"
-      ]
-    }
+      ],
+      "@config/*": [
+        "src/config/*"
+      ],
+    },
+    "allowImportingTsExtensions": true
   }
 }

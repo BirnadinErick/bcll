@@ -1,0 +1,26 @@
+---
+import { address, email, fb_link } from "@config/bio.ts";
+---
+
+<div class="bg-primary text-white py-3 md:block hidden">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+      <ul
+        class="flex divide-x divide-white divide-opacity-25 text-base lg:justify-start justify-center"
+      >
+        <li class="mr-4">{address}</li>
+        <li class="pl-4">
+          <a href={`mailto:${email}`}>{email}</a>
+        </li>
+      </ul>
+      <ul
+        class="text-base flex lg:justify-end justify-center divide-x divide-white divide-opacity-25 items-center"
+      >
+        <li class="px-2">Follow Us On:</li>
+        <li class="px-2">
+          <a href={fb_link}> <img src="/assets/images/social/wfb.svg" alt="" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
