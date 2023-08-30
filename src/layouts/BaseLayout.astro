@@ -1,0 +1,21 @@
+---
+import Head from "@frag/Head.astro";
+import Scripts from "@frag/Scripts.astro";
+import Footer from "@frag/Footer.astro";
+
+const {title} = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <Head title={title}  />
+
+  <body class="font-gilroy font-medium text-gray text-lg leading-[27px]">
+    
+    <slot/>
+    
+    <Footer />
+    <div class="rt-mobile-menu-overlay"></div>
+    <Scripts />
+  </body>
+</html>
